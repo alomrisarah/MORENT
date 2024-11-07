@@ -1,0 +1,762 @@
+@import url("https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+.popular-cars-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #90a3bf;
+  margin: 0;
+}
+
+.view-all-button {
+  background-color: #f6f7f9;
+  color: #3563e9;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.view-all-button:hover {
+  background-color: rgb(230.7, 233.4, 238.8);
+}
+
+.card-grid .card {
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  transition: transform 0.2s;
+}
+
+.card-grid .card:hover {
+  transform: scale(1.05);
+}
+
+.card-grid .card .card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-grid .card .card-body {
+  text-align: center;
+}
+
+.card-grid .card .card-body .card-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.filter-aside {
+  width: 360px;
+  background-color: white;
+  padding: 20px;
+  left: 0;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  height: 100%;
+  width: 360px;
+}
+
+@media (max-width: 768px) {
+  .filter-container {
+    width: 100%;
+    flex-direction: row;
+    gap: 30px;
+  }
+
+}
+
+/* Modal  */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+
+/* Modal content */
+.modal-content {
+  background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #3563E9;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+  width: 250px;
+}
+
+.filter-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #90A3BF;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkbox-group label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #596780;
+}
+
+#price-range {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.price-output {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #596780;
+  margin-top: 10px;
+}
+
+.price-output span {
+  color: #596780;
+}
+
+#price-range:focus+.price-output span {
+  color: #90A3BF;
+}
+
+.card-grid .card .card-body .card-text {
+  font-size: 0.9rem;
+}
+
+.show-more-button {
+  background-color: #3563e9;
+  color: white;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 16px;
+  width: 156px;
+  height: 44px;
+  margin: 0 auto;
+}
+
+.cars-count-button {
+  background-color: #f6f7f9;
+  color: #90a3bf;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  margin-left: 15px;
+}
+
+.rent-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 15px;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  position: relative;
+}
+
+.rent-card-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.rent-card-title .rent-car-name {
+  font-family: "Plus Jakarta Sans";
+  font-weight: bold;
+  font-size: 20px;
+  color: #1a202c;
+  align-self: center;
+}
+
+.rent-card-title .heart-icon {
+  font-size: 24px;
+  color: lightgray;
+}
+
+.rent-card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.rent-card-body .rent-car-type {
+  font-weight: bold;
+  font-size: 14px;
+  color: #90a3bf;
+  text-align: left;
+}
+
+.rent-card-body .rent-car-image-container {
+  position: relative;
+}
+
+.rent-card-body .rent-car-image-container img.rent-car-image {
+  width: 250px;
+  height: 112px;
+  z-index: 1;
+}
+
+.rent-card-body .rent-car-image-container .rent-shadow-image {
+  position: absolute;
+  width: 304px;
+  height: 68px;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  border-radius: 0 0 20px 20px;
+}
+
+.rent-card-body .rent-row-of-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-top: 10px;
+  gap: 5px;
+}
+
+.rent-card-body .rent-row-of-images img.rent-small-image {
+  width: 58px;
+  height: 24px;
+}
+
+.rent-card .rent-price-row {
+  margin-top: 10px;
+}
+
+.rent-card .rent-price-row .rent-price {
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
+}
+
+.rent-card .rent-price-row .rent-price-label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #90a3bf;
+}
+
+.rent-card .rent-now {
+  margin-top: 10px;
+  background-color: #3563e9;
+  color: white;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 600;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.navbar {
+  border-radius: 10px;
+  background-color: white;
+  border-bottom: 2px solid #ddd;
+  height: 124px;
+  grid-area: navbar;
+}
+
+.navbar .navbar-search .form-control {
+  max-width: 500px;
+  border-radius: 50px;
+  background-color: #ffffff;
+}
+
+.navbar .input-group-text {
+  border-radius: 50px;
+  padding: 5px 10px;
+}
+
+.navbar .form-control {
+  border-radius: 10px;
+  padding: 5px;
+  height: 40px;
+}
+
+.navbar .input-group-text i {
+  font-size: 1rem;
+}
+
+.navbar-logo {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 48px;
+  letter-spacing: -0.03em;
+  color: #3563e9;
+  text-align: left;
+}
+
+.navbar .navbar-brand.logo-text {
+  color: #3563e9;
+  text-decoration: none;
+}
+
+@media (max-width: 1000px) {
+  .navbar {
+    height: auto;
+  }
+
+  .navbar .navbar-search .form-control {
+    max-width: 100%;
+  }
+}
+
+.footer {
+  background-color: white;
+}
+
+.footer-text,
+.footer-copy,
+.footer-policy {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  color: rgba(19, 19, 19, 0.6);
+}
+
+.footer-heading {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: -0.02em;
+  color: #1a202c;
+}
+
+.footer-links a {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  color: rgba(19, 19, 19, 0.6);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #3563e9;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid #e5e5e5;
+  padding-top: 10px;
+}
+
+.footer-policy:hover {
+  color: #3563e9;
+  text-decoration: underline;
+}
+
+.footer-logo {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -0.03em;
+  color: #3563e9;
+  text-align: left;
+}
+
+.payment-method-card.card-blue {
+  background-color: #54a6ff;
+  color: white;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.payment-method-card.card-dark-blue {
+  background-color: #3563e9;
+  color: white;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.payment-method-card .card-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+
+.payment-method-card .card-text {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: auto;
+}
+
+.payment-method-card .rental-button {
+  background-color: #3563e9;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 120px;
+  height: 44px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  cursor: pointer;
+}
+
+.payment-method-card .rental-button:hover {
+  background-color: #2c4a7c;
+}
+
+.payment-method-card .card-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.form-container {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.form-container .form-column {
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.form-container .form-column .form-check {
+  margin-bottom: 1.5rem;
+}
+
+.form-container .form-column .form-label {
+  font-weight: bold;
+}
+
+.form-container .form-column .form-select {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-size: 0.4rem;
+  border: none;
+}
+
+.form-container .form-column.border-right {
+  border-right: 1px solid lightgray;
+  border-radius: 0px;
+}
+
+.form-container .form-column .scroll-button-container {
+  position: fixed;
+  bottom: 20px;
+  left: 95%;
+  transform: translateX(-50%);
+}
+
+.form-container .form-column #scroll-button {
+  background-color: #3563e9;
+  color: white;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  z-index: 2000;
+}
+
+.step-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #f6f7f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.step-info,
+.small {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 14px;
+  color: #90a3bf;
+  line-height: 150%;
+  margin-bottom: 1rem;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.step-item-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a202c;
+  margin-right: 10px;
+}
+
+.step-item-content {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.step-progress {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.step-progress .step-bar {
+  flex: 1;
+  height: 5px;
+  background-color: #ddd;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+.step-progress .step-bar.active {
+  background-color: #3563e9;
+}
+
+@media (max-width: 768px) {
+  .step-container {
+    padding: 15px;
+  }
+
+  .step-info,
+  .step-item-title,
+  .step-item-content {
+    font-size: 12px;
+  }
+}
+
+body {
+  background: #f6f7f9;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.col-md-5 {
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1000px) {
+  .col-md-5 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.reviews-container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.reviews-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+}
+
+.reviews-btn {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  padding: 5px 15px;
+  font-weight: normal;
+}
+
+.review-card {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.review-image img {
+  width: 56px;
+  height: 56px;
+  border-radius: 60px;
+  object-fit: cover;
+}
+
+.review-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.username {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+}
+
+.review-date,
+.job-title {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  color: #90A3BF;
+}
+
+.feedback-text {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  color: #596780;
+  line-height: 1.6;
+}
+
+.review-stats span {
+  font-size: 18px;
+}
+
+/* Star Icons (Gold and Gray) */
+.star {
+  font-size: 18px;
+}
+
+.gold {
+  color: gold;
+}
+
+.gray {
+  color: gray;
+}
+
+/* Review Count */
+.review-count {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  color: #596780;
+}
+
+/* Heart Icon */
+.heart-icon {
+  font-size: 24px;
+  color: red;
+
+}
+.col-md-6 {
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+}
+/* Car Name */
+.car-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  color: black;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .car-name {
+    font-size: 28px;
+  }
+
+  .star {
+    font-size: 16px;
+  }
+
+  .review-count {
+    font-size: 14px;
+  }
+
+  .heart-icon {
+    font-size: 20px;
+  }
+}
+
+.specification-item {
+  display: flex;
+  gap: 15px;
+}
+
+.spec-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: semibold;
+  color: #596780;
+}
+
+.spec-value {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #596780;
+}
+
+.row .col-md-6 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.specification-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .spec-title {
+    font-size: 18px;
+  }
+
+  .spec-value {
+    font-size: 18px;
+  }
+}
