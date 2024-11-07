@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <link rel="stylesheet" href="/style/style.css" />
+  <title>Category Page</title>
+ </head>
+
+ <body>
+      <!--navbar-->
+      <div id="navbar-placeholder"></div>
+  <div class="container-fluid">
+   <div class="row">
+    <aside class="filter-aside side-nav">
+     <div class="filter-container">
+      <!-- Type Filter -->
+      <div class="filter-section">
+       <h3 class="filter-title">T Y P E</h3>
+       <div class="checkbox-group">
+        <label><input type="checkbox" id="sport" /> Sport (10)</label>
+        <label><input type="checkbox" id="suv" /> SUV (12)</label>
+        <label><input type="checkbox" id="mpv" /> MPV (16)</label>
+        <label><input type="checkbox" id="sedan" /> Sedan (20)</label>
+        <label><input type="checkbox" id="coupe" /> Coupe (14)</label>
+        <label><input type="checkbox" id="hatchback" /> Hatchback (14)</label>
+       </div>
+      </div>
+
+      <!-- Capacity Filter -->
+      <div class="filter-section">
+       <h3 class="filter-title">C A P A C I T Y</h3>
+       <div class="checkbox-group">
+        <label><input type="checkbox" id="2person" /> 2 Person (10)</label>
+        <label><input type="checkbox" id="4person" /> 4 Person (14)</label>
+        <label><input type="checkbox" id="6person" /> 6 Person (12)</label>
+        <label><input type="checkbox" id="8plus" /> 8 or More (16)</label>
+       </div>
+      </div>
+
+      <!-- Price Filter -->
+      <div class="filter-section">
+       <h3 class="filter-title">P R I C E</h3>
+       <input type="range" id="price-range" min="0" max="100" value="50" />
+       <div class="price-output">
+        <span>Max. $100.00</span>
+       </div>
+      </div>
+     </div>
+    </aside>
+    <!-- Main Content -->
+    <main class="col-md-9 main-content">
+     <div class="container">
+            <!-- Form will load here -->
+      <div id="form-placeholder"></div>
+      <!-- Grid Section -->
+      <div class="row card-grid mt-4">
+       <!-- Card 1 -->
+       <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
+        <div class="rent-card">
+         <div class="rent-card-header">
+          <div class="rent-card-title">
+           <span class="rent-car-name">New MG ZS</span>
+           <i class="heart-icon bi bi-heart"></i>
+          </div>
+         </div>
+         <div class="rent-card-body">
+          <div class="rent-car-type">
+           <span class="rent-car-type-label">SUV</span>
+          </div>
+          <div class="rent-car-image-container text-center">
+           <img src="/imgs/image7.png" class="rent-car-image" />
+           <div class="rent-shadow-image"></div>
+          </div>
+          <div class="row rent-row-of-images text-center">
+           <div class="col-auto">
+            <img src="/imgs/Gasoline.png" class="rent-small-image" />
+           </div>
+           <div class="col-auto">
+            <img src="/imgs/Car.png" class="rent-small-image" />
+           </div>
+           <div class="col-auto">
+            <img src="/imgs/Capacity.png" class="rent-small-image" />
+           </div>
+          </div>
+
+          <div class="rent-price-button-row d-flex justify-content-between align-items-center">
+           <div class="rent-price-row text-center">
+            <span class="rent-price">$74.00</span>
+            <span class="rent-price-label">/ day</span>
+           </div>
+           <div class="text-center">
+            <a href="/details.html" class="btn rent-now">Rent Now</a>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+
+       <!-- Card 2 -->
+       <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
+        <div class="rent-card">
+         <div class="rent-card-header">
+          <div class="rent-card-title">
+           <span class="rent-car-name">New MG ZS</span>
+           <i class="heart-icon bi bi-heart"></i>
+          </div>
+         </div>
+         <div class="rent-card-body">
+          <div class="rent-car-type">
+           <span class="rent-car-type-label">SUV</span>
+          </div>
+          <div class="rent-car-image-container text-center">
+           <img src="/imgs/image7.png" class="rent-car-image" />
+           <div class="rent-shadow-image"></div>
+          </div>
+          <div class="row rent-row-of-images text-center">
+           <div class="col-auto">
+            <img src="/imgs/Gasoline.png" class="rent-small-image" />
+           </div>
+           <div class="col-auto">
+            <img src="/imgs/Car.png" class="rent-small-image" />
+           </div>
+           <div class="col-auto">
+            <img src="/imgs/Capacity.png" class="rent-small-image" />
+           </div>
+          </div>
+
+          <div class="rent-price-button-row d-flex justify-content-between align-items-center">
+           <div class="rent-price-row text-center">
+            <span class="rent-price">$74.00</span>
+            <span class="rent-price-label">/ day</span>
+           </div>
+           <div class="text-center">
+            <a href="/details.html" class="btn rent-now">Rent Now</a>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <!-- Card 3 -->
+       <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
+        <div class="rent-card">
+         <div class="rent-card-header">
+          <div class="rent-card-title">
+           <span class="rent-car-name">New MG ZS</span>
+           <i class="heart-icon bi bi-heart"></i>
+          </div>
+         </div>
+         <div class="rent-card-body">
+          <div class="rent-car-type">
+           <span class="rent-car-type-label">SUV</span>
+          </div>
+          <div class="rent-car-image-container text-center">
+           <img src="/imgs/image7.png" class="rent-car-image" />
+           <div class="rent-shadow-image"></div>
+          </div>
+          <div class="row rent-row-of-images text-center">
+           <div class="col-auto">
+            <img src="/imgs/Gasoline.png" class="rent-small-image" />
+           </div>
+           <div class="col-auto">
+            <img src="/imgs/Car.png" class="rent-small-image" />
+           </div>
+           <div class="col-auto">
+            <img src="/imgs/Capacity.png" class="rent-small-image" />
+           </div>
+          </div>
+
+          <div class="rent-price-button-row d-flex justify-content-between align-items-center">
+           <div class="rent-price-row text-center">
+            <span class="rent-price">$74.00</span>
+            <span class="rent-price-label">/ day</span>
+           </div>
+           <div class="text-center">
+            <a href="/details.html" class="btn rent-now">Rent Now</a>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+
+       <!-- Card 4 -->
+       <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
+        <div class="rent-card">
+         <div class="rent-card-header">
+          <div class="rent-card-title">
+           <span class="rent-car-name">New MG ZS</span>
+           <i class="heart-icon bi bi-heart"></i>
+          </div>
+         </div>
+         <div class="rent-card-body">
+          <div class="rent-car-type">
+           <span class="rent-car-type-label">SUV</span>
+          </div>
+          <div class="rent-car-image-container text-center">
+           <img src="/imgs/image7.png" class="rent-car-image" />
+           <div class="rent-shadow-image"></div>
+          </div>
+          <div class="row rent-row-of-images text-center">
+           <div class="col-auto">
+            <img src="/imgs/Gasoline.png" class="rent-small-image" />
+           </div>
+           <div class="col-auto">
+            <img src="/imgs/Car.png" class="rent-small-image" />
+           </div>
+           <div class="col-auto">
+            <img src="/imgs/Capacity.png" class="rent-small-image" />
+           </div>
+          </div>
+
+          <div class="rent-price-button-row d-flex justify-content-between align-items-center">
+           <div class="rent-price-row text-center">
+            <span class="rent-price">$74.00</span>
+            <span class="rent-price-label">/ day</span>
+           </div>
+           <div class="text-center">
+            <a href="/details.html" class="btn rent-now">Rent Now</a>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+
+       <!-- Card 5 -->
+       <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
+        <div class="rent-card">
+         <div class="rent-card-header">
+          <div class="rent-card-title">
+           <span class="rent-car-name">New MG ZS</span>
+           <i class="heart-icon bi bi-heart"></i>
+          </div>
+         </div>
+         <div class="rent-card-body">
+          <div class="rent-car-type">
+           <span class="rent-car-type-label">SUV</span>
+          </div>
+          <div class="rent-car-image-container text-center">
+           <img src="/imgs/image7.png" class="rent-car-image" />
+           <div class="rent-shadow-image"></div>
+          </div>
+          <div class="row rent-row-of-images text-center">
+           <div class="col-auto">
+            <img src="/imgs/Gasoline.png" class="rent-small-image" />
+           </div>
+           <div class="col-auto">
+            <img src="/imgs/Car.png" class="rent-small-image" />
+           </div>
+           <div class="col-auto">
+            <img src="/imgs/Capacity.png" class="rent-small-image" />
+           </div>
+          </div>
+
+          <div class="rent-price-button-row d-flex justify-content-between align-items-center">
+           <div class="rent-price-row text-center">
+            <span class="rent-price">$74.00</span>
+            <span class="rent-price-label">/ day</span>
+           </div>
+           <div class="text-center">
+            <a href="/details.html" class="btn rent-now">Rent Now</a>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+
+       <!-- Card 6 -->
+       <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
+        <div class="rent-card">
+         <div class="rent-card-header">
+          <div class="rent-card-title">
+           <span class="rent-car-name">New MG ZS</span>
+           <i class="heart-icon bi bi-heart"></i>
+          </div>
+         </div>
+         <div class="rent-card-body">
+          <div class="rent-car-type">
+           <span class="rent-car-type-label">SUV</span>
+          </div>
+          <div class="rent-car-image-container text-center">
+           <img src="/imgs/image7.png" class="rent-car-image" />
+           <div class="rent-shadow-image"></div>
+          </div>
+          <div class="row rent-row-of-images text-center">
+           <div class="col-auto">
+            <img src="/imgs/Gasoline.png" class="rent-small-image" />
+           </div>
+           <div class="col-auto">
+            <img src="/imgs/Car.png" class="rent-small-image" />
+           </div>
+           <div class="col-auto">
+            <img src="/imgs/Capacity.png" class="rent-small-image" />
+           </div>
+          </div>
+
+          <div class="rent-price-button-row d-flex justify-content-between align-items-center">
+           <div class="rent-price-row text-center">
+            <span class="rent-price">$74.00</span>
+            <span class="rent-price-label">/ day</span>
+           </div>
+           <div class="text-center">
+            <a href="/details.html" class="btn rent-now">Rent Now</a>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+
+       <!-- Card 7 -->
+       <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
+        <div class="rent-card">
+         <div class="rent-card-header">
+          <div class="rent-card-title">
+           <span class="rent-car-name">New MG ZS</span>
+           <i class="heart-icon bi bi-heart"></i>
+          </div>
+         </div>
+         <div class="rent-card-body">
+          <div class="rent-car-type">
+           <span class="rent-car-type-label">SUV</span>
+          </div>
+          <div class="rent-car-image-container text-center">
+           <img src="/imgs/image7.png" class="rent-car-image" />
+           <div class="rent-shadow-image"></div>
+          </div>
+          <div class="row rent-row-of-images text-center">
+           <div class="col-auto">
+            <img src="/imgs/Gasoline.png" class="rent-small-image" />
+           </div>
+           <div class="col-auto">
+            <img src="/imgs/Car.png" class="rent-small-image" />
+           </div>
+           <div class="col-auto">
+            <img src="/imgs/Capacity.png" class="rent-small-image" />
+           </div>
+          </div>
+
+          <div class="rent-price-button-row d-flex justify-content-between align-items-center">
+           <div class="rent-price-row text-center">
+            <span class="rent-price">$74.00</span>
+            <span class="rent-price-label">/ day</span>
+           </div>
+           <div class="text-center">
+            <a href="/details.html" class="btn rent-now">Rent Now</a>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+
+       <!-- Card 8 -->
+       <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
+        <div class="rent-card">
+         <div class="rent-card-header">
+          <div class="rent-card-title">
+           <span class="rent-car-name">New MG ZS</span>
+           <i class="heart-icon bi bi-heart"></i>
+          </div>
+         </div>
+         <div class="rent-card-body">
+          <div class="rent-car-type">
+           <span class="rent-car-type-label">SUV</span>
+          </div>
+          <div class="rent-car-image-container text-center">
+           <img src="/imgs/image7.png" class="rent-car-image" />
+           <div class="rent-shadow-image"></div>
+          </div>
+          <div class="row rent-row-of-images text-center">
+           <div class="col-auto">
+            <img src="/imgs/Gasoline.png" class="rent-small-image" />
+           </div>
+           <div class="col-auto">
+            <img src="/imgs/Car.png" class="rent-small-image" />
+           </div>
+           <div class="col-auto">
+            <img src="/imgs/Capacity.png" class="rent-small-image" />
+           </div>
+          </div>
+
+          <div class="rent-price-button-row d-flex justify-content-between align-items-center">
+           <div class="rent-price-row text-center">
+            <span class="rent-price">$74.00</span>
+            <span class="rent-price-label">/ day</span>
+           </div>
+           <div class="text-center">
+            <a href="/details.html" class="btn rent-now">Rent Now</a>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+
+       <!-- Card 9 -->
+       <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
+        <div class="rent-card">
+         <div class="rent-card-header">
+          <div class="rent-card-title">
+           <span class="rent-car-name">New MG ZS</span>
+           <i class="heart-icon bi bi-heart"></i>
+          </div>
+         </div>
+         <div class="rent-card-body">
+          <div class="rent-car-type">
+           <span class="rent-car-type-label">SUV</span>
+          </div>
+          <div class="rent-car-image-container text-center">
+           <img src="/imgs/image7.png" class="rent-car-image" />
+           <div class="rent-shadow-image"></div>
+          </div>
+          <div class="row rent-row-of-images text-center">
+           <div class="col-auto">
+            <img src="/imgs/Gasoline.png" class="rent-small-image" />
+           </div>
+           <div class="col-auto">
+            <img src="/imgs/Car.png" class="rent-small-image" />
+           </div>
+           <div class="col-auto">
+            <img src="/imgs/Capacity.png" class="rent-small-image" />
+           </div>
+          </div>
+
+          <div class="rent-price-button-row d-flex justify-content-between align-items-center">
+           <div class="rent-price-row text-center">
+            <span class="rent-price">$74.00</span>
+            <span class="rent-price-label">/ day</span>
+           </div>
+           <div class="text-center">
+            <a href="/details.html" class="btn rent-now">Rent Now</a>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+
+      <!-- Show More Cars and Cars Count Button Row -->
+      <div class="row mt-4 align-items-center mb-4">
+       <div class="col text-center">
+        <a href="/details.html">
+         <button class="btn show-more-button">Show More Cars</button>
+        </a>
+       </div>
+       <div class="col-auto ms-auto">
+        <span class="btn cars-count-button">120 Cars</span>
+       </div>
+      </div>
+     </div>
+    </main>
+   </div>
+   <!-- Footer -->
+   <div id="footer-placeholder"></div>
+  </div>
+  <script src="/script.js"></script>
+ </body>
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="/style/style.css" />
+  <title>Payment Page</title>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Main Content -->
+  <div class="container mt-5">
+    <div class="row">
+      <!-- Steps Column -->
+      <div class="col-md-7 mb-4">
+        <div class="row">
+        <!-- Payment Information Card -->
+        <div class="col-12 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Payment Information</h5>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <p class="small mb-0">Please enter your billing info</p>
+                <p class="step-info mb-0">Step 1 of 4</p>
+              </div>
+        
+              <form>
+                <div class="row mb-3">
+                  <!-- Name -->
+                  <div class="col-12 col-md-6">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your name" required />
+                  </div>
+        
+                  <!-- Phone Number -->
+                  <div class="col-12 col-md-6">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="text" class="form-control" id="phone" placeholder="Phone number" required />
+                  </div>
+                </div>
+        
+                <div class="row mb-3">
+                  <!-- Address -->
+                  <div class="col-12 col-md-6">
+                    <label for="address" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="address" placeholder="Address" required />
+                  </div>
+        
+                  <!-- Town/City -->
+                  <div class="col-12 col-md-6">
+                    <label for="city" class="form-label">Town/City</label>
+                    <input type="text" class="form-control" id="city" placeholder="Town or city" required />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+          <!-- Rental Info Card -->
+          <div class="col-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Rental Info</h5>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <p class="small mb-0">Please select your rental data</p>
+                  <p class="step-info mb-0">Step 2 of 4</p>
+                </div>
+                <form>
+                  <div class="form-check mb-3">
+                    <input type="radio" class="form-check-input" id="pickupOption" name="rentalOption" checked />
+                    <label class="form-check-label" for="pickupOption">Pick Up</label>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="pickupLocation" class="form-label">Location</label>
+                      <select id="pickupLocation" class="form-select" required>
+                        <option selected disabled>Select your location</option>
+                        <option value="location1">Location 1</option>
+                        <option value="location2">Location 2</option>
+                        <option value="location3">Location 3</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="pickupDate" class="form-label">Pick Up Date</label>
+                      <select id="pickupDate" class="form-select" required>
+                        <option selected disabled>Select your date</option>
+                        <option value="date1">Date 1</option>
+                        <option value="date2">Date 2</option>
+                        <option value="date3">Date 3</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="pickupTime" class="form-label">Pick Up Time</label>
+                      <select id="pickupTime" class="form-select" required>
+                        <option selected disabled>Select your time</option>
+                        <option value="time1">Time 1</option>
+                        <option value="time2">Time 2</option>
+                        <option value="time3">Time 3</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-check mb-3">
+                    <input type="radio" class="form-check-input" id="dropoffOption" name="rentalOption" />
+                    <label class="form-check-label" for="dropoffOption">Drop Off</label>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="dropoffLocation" class="form-label">Location</label>
+                      <select id="dropoffLocation" class="form-select" required>
+                        <option selected disabled>Select your location</option>
+                        <option value="location1">Location 1</option>
+                        <option value="location2">Location 2</option>
+                        <option value="location3">Location 3</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="dropoffDate" class="form-label">Drop Off Date</label>
+                      <select id="dropoffDate" class="form-select" required>
+                        <option selected disabled>Select your date</option>
+                        <option value="date1">Date 1</option>
+                        <option value="date2">Date 2</option>
+                        <option value="date3">Date 3</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="dropoffTime" class="form-label">Drop Off Time</label>
+                      <select id="dropoffTime" class="form-select" required>
+                        <option selected disabled>Select your time</option>
+                        <option value="time1">Time 1</option>
+                        <option value="time2">Time 2</option>
+                        <option value="time3">Time 3</option>
+                      </select>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- Payment Method Card -->
+          <div class="col-12 mb-4">
+            <div class="card payment-method-card bg-white">
+              <div class="card-body">
+                <h5 class="card-title">Payment Method</h5>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <p class="small mb-0">Please enter your Payment Method</p>
+                  <p class="step-info mb-0">Step 3 of 4</p>
+                </div>
+                <form>
+                  <div
+                    class="form-check mb-3 payment-option bg-light p-3 d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                      <input type="radio" class="form-check-input" id="visaOption" name="paymentMethod" checked />
+                      <label class="form-check-label" for="visaOption">Visa</label>
+                    </div>
+                    <img src="/imgs/visa.png" alt="Visa Logo" class="payment-logo" width="100px" />
+                  </div>
+                  <div class="visa-inputs payment-details">
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label for="cardNumber" class="form-label">Card Number</label>
+                        <input type="text" class="form-control" id="cardNumber" placeholder="Card Number" required />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="expirationDate" class="form-label">Expiration Date</label>
+                        <input type="text" class="form-control" id="expirationDate" placeholder="MM/YY" required />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="cardholderName" class="form-label">Cardholder Name</label>
+                        <input type="text" class="form-control" id="cardholderName" placeholder="John Doe" required />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="cvc" class="form-label">CVC</label>
+                        <input type="text" class="form-control" id="cvc" placeholder="CVC" required />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="form-check mb-3 payment-option bg-light p-3 d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                      <input type="radio" class="form-check-input" id="bitcoinOption" name="paymentMethod" />
+                      <label class="form-check-label" for="bitcoinOption">Bitcoin</label>
+                    </div>
+                    <img src="/imgs/Bitcoin_logo.svg.png" alt="MasterCard Logo" class="payment-logo" width="100px" />
+                  </div>
+                  <div class="mastercard-inputs payment-details d-none">
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label for="mastercardNumber" class="form-label">Card Number</label>
+                        <input type="text" class="form-control" id="mastercardNumber" placeholder="Card Number"
+                          required />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="mastercardExpirationDate" class="form-label">Expiration Date</label>
+                        <input type="text" class="form-control" id="mastercardExpirationDate" placeholder="MM/YY"
+                          required />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="mastercardHolderName" class="form-label">Cardholder Name</label>
+                        <input type="text" class="form-control" id="mastercardHolderName" placeholder="John Doe"
+                          required />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="mastercardCvc" class="form-label">CVC</label>
+                        <input type="text" class="form-control" id="mastercardCvc" placeholder="CVC" required />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="form-check mb-3 payment-option bg-light p-3 d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                      <input type="radio" class="form-check-input" id="paypalOption1" name="paymentMethod" />
+                      <label class="form-check-label ms-2" for="paypalOption1">PayPal</label>
+                    </div>
+                    <img src="/imgs/PayPal-Logo-2022.png" alt="PayPal Logo" class="payment-logo" width="90px" />
+                    <div class="paypal-inputs payment-details d-none">
+                      <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <label for="paypalEmail" class="form-label">Email</label>
+                          <input type="email" class="form-control" id="paypalEmail" placeholder="Email" required />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label for="paypalPassword" class="form-label">Password</label>
+                          <input type="password" class="form-control" id="paypalPassword" placeholder="Password"
+                            required />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- Confirmation Card -->
+          <div class="col-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Confirmation</h5>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <p class="small mb-0">We are getting to the end. Just few clicks and your rental is ready!</p>
+                  <p class="step-info mb-0">Step 4 of 4</p>
+                </div>
+                <!-- Confirmation Step -->
+                <div class="confirmation-step">
+                  <div class="form-check mb-3 confirmation-option bg-light p-3">
+                    <input type="checkbox" class="form-check-input" id="marketingCheckbox" />
+                    <label class="form-check-label" for="marketingCheckbox"> I agree with sending marketing and
+                      newsletter emails. No spam, promised! </label>
+                  </div>
+                  <div class="form-check mb-3 confirmation-option bg-light p-3">
+                    <input type="checkbox" class="form-check-input" id="termsCheckbox" />
+                    <label class="form-check-label" for="termsCheckbox"> I agree with our terms and conditions and
+                      privacy policy. </label>
+                  </div>
+                <!-- "Rent Now" Button -->
+                <div class="rent-now-container m-3">
+                  <button class="rent-now-btn btn-primary " onclick="showModal()">Rent Now</button>
+                </div>
+                
+                <!-- Modal Structure -->
+                <div id="successModal" class="modal">
+                  <div class="modal-content">
+                    <h2>Success!</h2>
+                    <p>The car has been rented successfully! Thank you for using our MoRent website!</p>
+                    <button onclick="closeModal()">Close</button>
+                  </div>
+                </div>
+
+
+                  <div class="security-icon-container">
+                    <img src="/imgs/safty.png" alt="Security Icon" class="security-icon" />
+                    <h3 class="security-text">All your data are safe</h3>
+                    <p class="security-description">We are using the most advanced security to provide you the best
+                      experience ever.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Summary Column -->
+      <div class="col-md-5 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"
+              style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: bold; font-size: 20px; color: black; text-align: left">
+              Rental Summary</h5>
+            <p class="card-text"
+              style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 500; font-size: 14px; color: #90a3bf; text-align: left">
+              Prices may change depending on the length of the rental and the price of your rental car.</p>
+            <div class="row align-items-center"
+              style="border-bottom: 0.5px solid #c3d4e9; padding-bottom: 10px; margin-bottom: 10px">
+              <div class="col-3">
+                <img src="/imgs/Look.png" alt="Car Image" class="img-fluid" style="max-width: 100%; height: auto" />
+              </div>
+              <div class="col-9">
+                <h6
+                  style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: bold; font-size: 32px; color: black; margin-bottom: 0">
+                  Nissan GT - R</h6>
+                <div class="d-flex align-items-center">
+                  <div class="star-rating" style="margin-right: 8px">
+                    <span style="color: gold">★</span>
+                    <span style="color: gold">★</span>
+                    <span style="color: gold">★</span>
+                    <span style="color: gold">★</span>
+                    <span style="color: gray">★</span>
+                  </div>
+                  <p class="mb-0"
+                    style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 500; font-size: 14px; color: #90a3bf">
+                    440+ Reviewers</p>
+                </div>
+              </div>
+            </div>
+            <div class="row" style="background-color: white; padding: 10px 0; margin-bottom: 5px">
+              <div class="col-6"
+                style="text-align: left; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 16px; color: #90a3bf">
+                Subtotal</div>
+              <div class="col-6"
+                style="text-align: right; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: bold; font-size: 14px; color: black">
+                $80.00</div>
+            </div>
+            <!-- Tax Row -->
+            <div class="row" style="background-color: white; padding: 10px 0">
+              <div class="col-6"
+                style="text-align: left; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 16px; color: #90a3bf">
+                Tax</div>
+              <div class="col-6"
+                style="text-align: right; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: bold; font-size: 14px; color: black">
+                $00.00</div>
+            </div>
+            <!-- promo-code-section -->
+            <div class="promo-code-section"
+              style="background-color: #f6f7f9; padding: 1px; margin-top: 10px; width: 300px; border: none">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Apply promo code" aria-label="Promo code"
+                  style="border: none" />
+                <button class="btn btn-secondary" style="background-color: #f6f7f9; border: none; color: black">Apply
+                  Now</button>
+              </div>
+            </div>
+            <!-- Total Rental Price -->
+            <div class="row" style="background-color: white; padding: 10px 0; margin-top: 10px">
+              <div class="col-6"
+                style="text-align: left; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: bold; font-size: 16px; color: black">
+                Total Rental Price</div>
+              <div class="col-6"
+                style="text-align: right; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: bold; font-size: 16px; color: black">
+                $80.00</div>
+            </div>
+            <p class="mt-2"
+              style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 500; font-size: 14px; color: #90a3bf; text-align: left">
+              Overall price includes rental discount.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer id="footer-placeholder"></footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    ////////////////////////////
+      function showModal() {
+        var modal = document.getElementById("successModal")
+        modal.style.display = "block"
+      }
+
+      function closeModal() {
+        var modal = document.getElementById("successModal")
+        modal.style.display = "none"
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+          // Function to load content into a placeholder
+          function loadContent(elementId, url) {
+            fetch(url)
+              .then((response) => {
+                if (!response.ok) {
+                  throw new Error(`Failed to load ${url}: ${response.statusText}`)
+                }
+                return response.text()
+              })
+              .then((data) => {
+                document.getElementById(elementId).innerHTML = data
+              })
+              .catch((error) => {
+                document.getElementById(elementId).innerHTML = `<p>Error loading content: ${error.message}</p>`
+              })
+          }
+
+          // Load content into placeholders
+          loadContent("navbar-placeholder", "nav.html")
+          loadContent("footer-placeholder", "footer.html")
+        })
+
+  </script>
+</body>
+
+</html>

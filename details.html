@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <link rel="stylesheet" href="/style/style.css" />
+    <title>Details Page</title>
+</head>
+
+<body>
+    <!--navbar-->
+    <div id="navbar-placeholder"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="filter-aside side-nav">
+                <div class="filter-container">
+                    <!-- Type Filter -->
+                    <div class="filter-section">
+                        <h3 class="filter-title">T Y P E</h3>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" id="sport" /> Sport (10)</label>
+                            <label><input type="checkbox" id="suv" /> SUV (12)</label>
+                            <label><input type="checkbox" id="mpv" /> MPV (16)</label>
+                            <label><input type="checkbox" id="sedan" /> Sedan (20)</label>
+                            <label><input type="checkbox" id="coupe" /> Coupe (14)</label>
+                            <label><input type="checkbox" id="hatchback" /> Hatchback (14)</label>
+                        </div>
+                    </div>
+
+                    <!-- Capacity Filter -->
+                    <div class="filter-section">
+                        <h3 class="filter-title">C A P A C I T Y</h3>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" id="2person" /> 2 Person (10)</label>
+                            <label><input type="checkbox" id="4person" /> 4 Person (14)</label>
+                            <label><input type="checkbox" id="6person" /> 6 Person (12)</label>
+                            <label><input type="checkbox" id="8plus" /> 8 or More (16)</label>
+                        </div>
+                    </div>
+
+                    <!-- Price Filter -->
+                    <div class="filter-section">
+                        <h3 class="filter-title">P R I C E</h3>
+                        <input type="range" id="price-range" min="0" max="100" value="50" />
+                        <div class="price-output">
+                            <span>Max. $100.00</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="col-md-9">
+                <div class="row mt-5">
+                    <!-- First Column: Blue Card with Images -->
+                    <div class="col-md-6">
+                        <!-- Blue Card (First Row) -->
+                        <div class="card payment-method-card card-blue mb-3" style="height: 100%; margin-bottom: 20px;">
+                            <div class="card-body">
+                                <h5 class="card-title">The Best Platform for Car Rental</h5>
+                                <p class="card-text">Ease of doing a car rental safely and reliably. Of course at a low
+                                    price.</p>
+                                <div class="text-center mt-3">
+                                    <img src="/imgs/image7.png" alt="Car Rental Platform" class="card-image" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Row of Images (Second Row) -->
+                        <div class="d-flex justify-content-between">
+                            <img src="/imgs/image8.png" alt="Image 1" class="img-fluid"
+                                style="height: 100px; width: 90px;">
+                            <img src="/imgs/image8.png" alt="Image 2" class="img-fluid"
+                                style="height: 100px; width: 90px;">
+                            <img src="/imgs/image8.png" alt="Image 3" class="img-fluid"
+                                style="height: 100px; width: 90px;">
+                        </div>
+                    </div>
+
+                    <!-- Second Column: White Car Card -->
+                    <div class="col-md-6">
+                        <div class="car-card"
+                            style="background-color: white; border-radius: 10px; padding: 30px; height: 100%;">
+                            <h2 class="car-name"
+                                style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 32px; font-weight: bold; color: black;">
+                                Nissan GT - R
+                            </h2>
+                            <div class="car-rating d-flex gap-2 align-items-center">
+                                <span class="star gold">★</span>
+                                <span class="star gold">★</span>
+                                <span class="star gold">★</span>
+                                <span class="star gold">★</span>
+                                <span class="star gray">★</span>
+                                <span class="review-count"
+                                    style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 16px; color: #596780">
+                                    +440 Reviews
+                                </span>
+                            </div>
+                            <div class="col-4 text-end">
+                                <i class="heart-icon bi bi-heart"
+                                    style="font-size: 24px; color: red; position: absolute; top: 30px; right: 30px;"></i>
+                            </div>
+                            <div class="row mt-2">
+                                <p class="car-description"
+                                    style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 20px; color: #596780">
+                                    NISMO has become the embodiment of Nissan's outstanding performance, inspired by the
+                                    most
+                                    unforgiving proving ground, the "race track".
+                                </p>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <div class="specification-item">
+                                        <span class="spec-title">Type</span>
+                                        <span class="spec-value">Car</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="specification-item">
+                                        <span class="spec-title">Capacity</span>
+                                        <span class="spec-value">2 Person</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <div class="specification-item">
+                                        <span class="spec-title">Steering</span>
+                                        <span class="spec-value">Manual</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="specification-item">
+                                        <span class="spec-title">Gasoline</span>
+                                        <span class="spec-value">70L</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-4 d-flex justify-content-between align-items-center">
+                                <div class="col-auto">
+                                    <p class="car-price"
+                                        style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 20px; font-weight: bold; color: black">
+                                        $80.00 / day
+                                    </p>
+                                </div>
+                                <div class="col-auto">
+                                    <a href="/payment.html" class="btn btn-primary rent-now-btn"
+                                        style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 16px; font-weight: bold">
+                                        Rent Now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reviews-container mt-5"
+                        style="background-color: white; border-radius: 10px; padding: 20px">
+                        <!-- Title Section -->
+                        <div class="row d-flex align-items-center">
+                            <div class="col-auto">
+                                <h3 class="reviews-title"
+                                    style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 20px; font-weight: 600; color: black">
+                                    Reviews</h3>
+                            </div>
+                            <div class="col-auto">
+                                <button class="btn btn-primary reviews-btn"
+                                    style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 16px; padding: 5px 15px; font-weight: normal">13</button>
+                            </div>
+                        </div>
+
+                        <!-- Review Cards Section -->
+                        <div class="row gap-4 mt-4">
+                            <!-- Review 1 -->
+                            <div class="col-12">
+                                <div class="review-card d-flex gap-4"
+                                    style="flex-direction: column; padding-bottom: 20px">
+                                    <div class="d-flex gap-3">
+                                        <!-- Reviewer's Image -->
+                                        <div class="review-image">
+                                            <img src="/imgs/profile.png" alt="reviewer"
+                                                style="width: 56px; height: 56px; border-radius: 60px; object-fit: cover" />
+                                        </div>
+                                        <!-- Review Content -->
+                                        <div class="review-content d-flex flex-column w-100">
+                                            <!-- Row 1: Username and Date -->
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="username"
+                                                    style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 20px; font-weight: 600; color: black">
+                                                    Alex Stanton</div>
+                                                <div class="review-date"
+                                                    style="font-family: 'Helvetica Neue', sans-serif; font-size: 14px; color: #90a3bf">
+                                                    21 July 2022</div>
+                                            </div>
+                                            <!-- Row 2: Job Title and Stats -->
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="job-title"
+                                                    style="font-family: 'Helvetica Neue', sans-serif; font-size: 14px; color: #90a3bf">
+                                                    CEO at Bukalapak</div>
+                                                <div class="review-stats d-flex gap-2">
+                                                    <span style="color: gold">★</span>
+                                                    <span style="color: gold">★</span>
+                                                    <span style="color: gold">★</span>
+                                                    <span style="color: gold">★</span>
+                                                    <span style="color: gray">★</span>
+                                                </div>
+                                            </div>
+                                            <!-- Row 3: Feedback Text -->
+                                            <div class="feedback-text mt-2"
+                                                style="font-family: 'Helvetica Neue', sans-serif; font-size: 14px; color: #596780; line-height: 1.6">
+                                                We are very happy with the service from the MORENT App. Morent has a low
+                                                price and also a large variety of cars with good and comfortable
+                                                facilities.
+                                                In addition, the service provided by the officers is also very friendly
+                                                and
+                                                very polite.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Review 2 (similar structure) -->
+                            <div class="col-12">
+                                <div class="review-card d-flex gap-4"
+                                    style="flex-direction: column; padding-bottom: 20px">
+                                    <div class="d-flex gap-3">
+                                        <!-- Reviewer's Image -->
+                                        <div class="review-image">
+                                            <img src="/imgs/profile.png" alt="reviewer"
+                                                style="width: 56px; height: 56px; border-radius: 60px; object-fit: cover" />
+                                        </div>
+                                        <!-- Review Content -->
+                                        <div class="review-content d-flex flex-column w-100">
+                                            <!-- Row 1: Username and Date -->
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="username"
+                                                    style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 20px; font-weight: 600; color: black">
+                                                    Skylar Dias</div>
+                                                <div class="review-date"
+                                                    style="font-family: 'Helvetica Neue', sans-serif; font-size: 14px; color: #90a3bf">
+                                                    15 June 2022</div>
+                                            </div>
+                                            <!-- Row 2: Job Title and Stats -->
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="job-title"
+                                                    style="font-family: 'Helvetica Neue', sans-serif; font-size: 14px; color: #90a3bf">
+                                                    CEO at Amazon</div>
+                                                <div class="review-stats d-flex gap-2">
+                                                    <span style="color: gold">★</span>
+                                                    <span style="color: gold">★</span>
+                                                    <span style="color: gold">★</span>
+                                                    <span style="color: gray">★</span>
+                                                    <span style="color: gray">★</span>
+                                                </div>
+                                            </div>
+                                            <!-- Row 3: Feedback Text -->
+                                            <div class="feedback-text mt-2"
+                                                style="font-family: 'Helvetica Neue', sans-serif; font-size: 14px; color: #596780; line-height: 1.6">
+                                                We are greatly helped by the services of the MORENT Application. Morent
+                                                has
+                                                low prices and also a wide variety of cars with good and comfortable
+                                                facilities. In addition, the service provided by the officers is also
+                                                very
+                                                friendly and very polite.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Show All Button -->
+                        <div class="row mt-4">
+                            <div class="col-12 text-center">
+                                <button class="btn show-all-btn"
+                                    style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 16px; font-weight: 600; color: #90a3bf; background-color: white; padding: 10px 20px; border-radius: 5px">Show
+                                    All</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 3: Recent Cars Section -->
+                    <div class="row mt-5">
+                        <div class="col-md-6">
+                            <h3 class="popular-cars-title">Recent Cars</h3>
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <a href="category.html" class="btn btn-primary view-all-button">View All</a>
+                        </div>
+                    </div>
+                    <div class="row card-grid mt-4">
+                        <!-- Card 1 -->
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                            <div class="rent-card">
+                                <div class="rent-card-header">
+                                    <div class="rent-card-title">
+                                        <span class="rent-car-name">New MG ZS</span>
+                                        <i class="heart-icon bi bi-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="rent-card-body">
+                                    <div class="rent-car-type">
+                                        <span class="rent-car-type-label">SUV</span>
+                                    </div>
+                                    <div class="rent-car-image-container text-center">
+                                        <img src="/imgs/image7.png" class="rent-car-image" />
+                                        <div class="rent-shadow-image"></div>
+                                    </div>
+                                    <div class="row rent-row-of-images text-center">
+                                        <div class="col"><img src="/imgs/Gasoline.png" class="rent-small-image" /></div>
+                                        <div class="col"><img src="/imgs/Car.png" class="rent-small-image" /></div>
+                                        <div class="col"><img src="/imgs/Capacity.png" class="rent-small-image" /></div>
+                                    </div>
+                                    <div
+                                        class="rent-price-button-row d-flex justify-content-between align-items-center">
+                                        <div class="rent-price-row text-center">
+                                            <span class="rent-price">$74.00</span>
+                                            <span class="rent-price-label">/ day</span>
+                                        </div>
+                                        <div class="text-center">
+                                            <a href="/payment.html" class="btn rent-now">Rent Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                            <div class="rent-card">
+                                <div class="rent-card-header">
+                                    <div class="rent-card-title">
+                                        <span class="rent-car-name">BMW X5</span>
+                                        <i class="heart-icon bi bi-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="rent-card-body">
+                                    <div class="rent-car-type">
+                                        <span class="rent-car-type-label">SUV</span>
+                                    </div>
+                                    <div class="rent-car-image-container text-center">
+                                        <img src="/imgs/image7.png" class="rent-car-image" />
+                                        <div class="rent-shadow-image"></div>
+                                    </div>
+                                    <div class="row rent-row-of-images text-center">
+                                        <div class="col"><img src="/imgs/Gasoline.png" class="rent-small-image" /></div>
+                                        <div class="col"><img src="/imgs/Car.png" class="rent-small-image" /></div>
+                                        <div class="col"><img src="/imgs/Capacity.png" class="rent-small-image" /></div>
+                                    </div>
+                                    <div
+                                        class="rent-price-button-row d-flex justify-content-between align-items-center">
+                                        <div class="rent-price-row text-center">
+                                            <span class="rent-price">$80.00</span>
+                                            <span class="rent-price-label">/ day</span>
+                                        </div>
+                                        <div class="text-center">
+                                            <a href="/payment.html" class="btn rent-now">Rent Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                            <div class="rent-card">
+                                <div class="rent-card-header">
+                                    <div class="rent-card-title">
+                                        <span class="rent-car-name">Honda CR-V</span>
+                                        <i class="heart-icon bi bi-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="rent-card-body">
+                                    <div class="rent-car-type">
+                                        <span class="rent-car-type-label">SUV</span>
+                                    </div>
+                                    <div class="rent-car-image-container text-center">
+                                        <img src="/imgs/image7.png" class="rent-car-image" />
+                                        <div class="rent-shadow-image"></div>
+                                    </div>
+                                    <div class="row rent-row-of-images text-center">
+                                        <div class="col"><img src="/imgs/Gasoline.png" class="rent-small-image" /></div>
+                                        <div class="col"><img src="/imgs/Car.png" class="rent-small-image" /></div>
+                                        <div class="col"><img src="/imgs/Capacity.png" class="rent-small-image" /></div>
+                                    </div>
+                                    <div
+                                        class="rent-price-button-row d-flex justify-content-between align-items-center">
+                                        <div class="rent-price-row text-center">
+                                            <span class="rent-price">$74.00</span>
+                                            <span class="rent-price-label">/ day</span>
+                                        </div>
+                                        <div class="text-center">
+                                            <a href="/payment.html" class="btn rent-now">Rent Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 4: Recommended Cars Section -->
+                    <div class="row mt-5">
+                        <!-- Recommended Cars Title and View All button -->
+                        <div class="col-md-6">
+                            <h3 class="popular-cars-title">Recommended Cars</h3>
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <a href="category.html" class="btn btn-primary view-all-button">View All</a>
+                        </div>
+                    </div>
+
+                    <!-- Cards for Recommended Cars -->
+                    <div class="row card-grid mt-4">
+                        <!-- Card 1 -->
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                            <div class="rent-card">
+                                <div class="rent-card-header">
+                                    <div class="rent-card-title">
+                                        <span class="rent-car-name">Audi Q7</span>
+                                        <i class="heart-icon bi bi-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="rent-card-body">
+                                    <div class="rent-car-type">
+                                        <span class="rent-car-type-label">SUV</span>
+                                    </div>
+                                    <div class="rent-car-image-container text-center">
+                                        <img src="/imgs/image7.png" class="rent-car-image" />
+                                        <div class="rent-shadow-image"></div>
+                                    </div>
+                                    <div class="row rent-row-of-images text-center">
+                                        <div class="col"><img src="/imgs/Gasoline.png" class="rent-small-image" /></div>
+                                        <div class="col"><img src="/imgs/Car.png" class="rent-small-image" /></div>
+                                        <div class="col"><img src="/imgs/Capacity.png" class="rent-small-image" /></div>
+                                    </div>
+                                    <div
+                                        class="rent-price-button-row d-flex justify-content-between align-items-center">
+                                        <div class="rent-price-row text-center">
+                                            <span class="rent-price">$95.00</span>
+                                            <span class="rent-price-label">/ day</span>
+                                        </div>
+                                        <div class="text-center">
+                                            <a href="/payment.html" class="btn rent-now">Rent Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                            <div class="rent-card">
+                                <div class="rent-card-header">
+                                    <div class="rent-card-title">
+                                        <span class="rent-car-name">Mercedes GLC</span>
+                                        <i class="heart-icon bi bi-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="rent-card-body">
+                                    <div class="rent-car-type">
+                                        <span class="rent-car-type-label">SUV</span>
+                                    </div>
+                                    <div class="rent-car-image-container text-center">
+                                        <img src="/imgs/image7.png" class="rent-car-image" />
+                                        <div class="rent-shadow-image"></div>
+                                    </div>
+                                    <div class="row rent-row-of-images text-center">
+                                        <div class="col"><img src="/imgs/Gasoline.png" class="rent-small-image" /></div>
+                                        <div class="col"><img src="/imgs/Car.png" class="rent-small-image" /></div>
+                                        <div class="col"><img src="/imgs/Capacity.png" class="rent-small-image" /></div>
+                                    </div>
+                                    <div
+                                        class="rent-price-button-row d-flex justify-content-between align-items-center">
+                                        <div class="rent-price-row text-center">
+                                            <span class="rent-price">$100.00</span>
+                                            <span class="rent-price-label">/ day</span>
+                                        </div>
+                                        <div class="text-center">
+                                            <a href="/payment.html" class="btn rent-now">Rent Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                            <div class="rent-card">
+                                <div class="rent-card-header">
+                                    <div class="rent-card-title">
+                                        <span class="rent-car-name">Range Rover</span>
+                                        <i class="heart-icon bi bi-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="rent-card-body">
+                                    <div class="rent-car-type">
+                                        <span class="rent-car-type-label">SUV</span>
+                                    </div>
+                                    <div class="rent-car-image-container text-center">
+                                        <img src="/imgs/image7.png" class="rent-car-image" />
+                                        <div class="rent-shadow-image"></div>
+                                    </div>
+                                    <div class="row rent-row-of-images text-center">
+                                        <div class="col"><img src="/imgs/Gasoline.png" class="rent-small-image" /></div>
+                                        <div class="col"><img src="/imgs/Car.png" class="rent-small-image" /></div>
+                                        <div class="col"><img src="/imgs/Capacity.png" class="rent-small-image" /></div>
+                                    </div>
+                                    <div
+                                        class="rent-price-button-row d-flex justify-content-between align-items-center">
+                                        <div class="rent-price-row text-center">
+                                            <span class="rent-price">$120.00</span>
+                                            <span class="rent-price-label">/ day</span>
+                                        </div>
+                                        <div class="text-center">
+                                            <a href="/payment.html" class="btn rent-now">Rent Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </main>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function loadContent(elementId, url) {
+                fetch(url)
+                    .then((response) => {
+                        if (!response.ok) {
+                            throw new Error(`Failed to load ${url}: ${response.statusText}`)
+                        }
+                        return response.text()
+                    })
+                    .then((data) => {
+                        document.getElementById(elementId).innerHTML = data
+                    })
+                    .catch((error) => {
+                        document.getElementById(elementId).innerHTML = `<p>Error loading content: ${error.message}</p>`
+                    })
+            }
+
+            // Load content into placeholders
+            loadContent("navbar-placeholder", "nav.html")
+        })
+    </script>
+</body>
+
+</html>
