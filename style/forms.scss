@@ -1,0 +1,61 @@
+@use "variables" as *;
+
+$background-color: white;
+$border-radius: 20px;
+$border-color: lightgray;
+
+.form-container {
+ margin-top: 5rem;
+ display: flex;
+ flex-direction: row;
+ gap: 1rem;
+
+ .form-column {
+  background-color: $background-color;
+  border: none;
+  border-radius: 20px;
+  padding: 20px;
+
+  // Radio button
+  .form-check {
+   margin-bottom: 1.5rem;
+  }
+
+  // Input label
+  .form-label {
+   font-weight: bold;
+  }
+
+  // Dropdown styling
+  .form-select {
+   border: 1px solid $border-color;
+   border-radius: 5px;
+   margin-bottom: 1rem;
+   font-size: 0.4rem;
+   border: none;
+  }
+
+  &.border-right {
+   border-right: 1px solid $border-color;
+   border-radius: 0px;
+  }
+  .scroll-button-container {
+   position: fixed;
+   bottom: 20px;
+   left: 95%;
+   transform: translateX(-50%);
+  }
+
+  #scroll-button {
+   background-color: #3563e9;
+   color: white;
+   font-family: "Plus Jakarta Sans", sans-serif;
+   font-weight: 600;
+   font-size: 16px;
+   padding: 10px 20px;
+   border-radius: 5px;
+   transition: background-color 0.3s ease;
+   z-index: 2000;
+  }
+ }
+}
